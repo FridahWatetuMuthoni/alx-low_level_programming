@@ -19,10 +19,10 @@ int main(void)
 			putchar('0' + j % 10);
 			if (i != 9 || j != 9)
 			{
-				putchar(' ');
 				if (count % 2 == 0)
 				{
 					putchar(',');
+					putchar(' ');
 				}
 				count++;
 			}
