@@ -15,8 +15,8 @@ int main(void)
 	for (i = 0; i < 100; i++)
 		for (j = 0; j < 100; j++)
 		{
-			putchar('0' + i);
-			putchar('0' + j);
+			putchar('0' + i % 10);
+			putchar('0' + j % 10);
 			if (i != 9 || j != 9)
 			{
 				putchar(' ');
