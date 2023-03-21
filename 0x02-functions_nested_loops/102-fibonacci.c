@@ -13,7 +13,7 @@ int main(void)
 	for (i = 0; i < 50; i++)
 	{
 		total = first + second;
-		printf("%lu", total);
+		printf("%d", total);
 
 		first = second;
 		second = total;
