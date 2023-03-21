@@ -8,12 +8,12 @@
 
 int main(void)
 {
-	int i, first = 0, second = 1, total;
+	unsigned long i, first = 0, second = 1, total;
 
 	for (i = 0; i < 50; i++)
 	{
 		total = first + second;
-		printf("%d", total);
+		printf("%lu", total);
 
 		first = second;
 		second = total;
