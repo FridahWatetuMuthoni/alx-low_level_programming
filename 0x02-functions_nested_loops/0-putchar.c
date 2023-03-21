@@ -1,12 +1,21 @@
 #include <stdio.h>
 
 /**
+ * _putchar - prints out a charater
+ * @c: the charater that is printed out
+ *
+ * Description: _putchar takes in a charater as its arguement
+ * and prints out the charater
+ * Return: always returns the integer value of the charater
+ */
+
+int _putchar(char c);
+
+/**
  * main - the function prints out _putchar
  *
  * Return: always returns zero
  */
-
-int _putchar( char c);
 
 int main(void)
 {
@@ -23,7 +32,16 @@ int main(void)
 }
 
 
-int _putchar( char c )
+/**
+ * _putchar - prints out a charater
+ * @c: the charater that is printed out
+ *
+ * Description: _putchar takes in a charater as its arguement
+ * and prints out the charater
+ * Return: always returns the integer value of the charater
+ */
+
+int _putchar(char c)
 {
-	return putchar(c);
+	return (putchar(c));
 }
