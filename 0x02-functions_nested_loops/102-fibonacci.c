@@ -6,7 +6,7 @@
  * Return: always returns  0.
  */
 
-0int main(void)
+int main(void)
 {
 	int i, first = 0, second = 1, total;
 
