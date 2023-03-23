@@ -21,4 +21,6 @@ void print_line(int n);
 
 void fizz_buzz(void);
 
+void print_diagonal(int n);
+
 #endif
