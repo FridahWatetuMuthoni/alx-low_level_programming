@@ -10,19 +10,25 @@
 
 void password_generator(void)
 {
-	int i, index;
-	char password[13];
-	char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{};:,.<>?";
-	char size = sizeof(charset) - 1;
+	int password[100];
+	int i, sum , num;
 
+	sum = 0;
 	srand(time(NULL));
-	for (i = 0; i < 12; i++)
+
+	for (i = 0; i < 100; i++)
 	{
-		index = rand() % size;
-		password[i] = charset[index];
+		password[i] = rand() % 78;
+		sum += (password[i] + '0');
+		putchar(password[i] + '0');
+		if((2772 - sum) - ('0' < 78))
+		{
+			num = 2772 - sum - '0';
+			sum += num;
+			putchar(num + '0');
+			break;
+		}
 	}
-	password[13] = '\0';
-	printf("%s\n", password);
 
 }
 
