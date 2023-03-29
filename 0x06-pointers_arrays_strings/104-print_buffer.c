@@ -1,4 +1,4 @@
-#include "main.c"
+#include "main.h"
 
 /**
  * print_buffer- the function prints a buffer
@@ -47,6 +47,8 @@ void print_buffer(char *b, int size)
 			}
 			printf("%c", charater);
 		}
+		printf("\n");
+		num += 10;
 	}
 }
 
