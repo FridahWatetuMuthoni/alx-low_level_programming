@@ -7,19 +7,29 @@
  * Return: returns a pointer to a string that has been changed
  */
 
+
 char *rot13(char *str)
 {
-	while (*str)
+	int i, j;
+
+	char alphabets[] =
+		"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char rot13_letters[] =
+		"NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+	i = 0;
+	while (str[i] != '\0')
 	{
-		if (*str >= 'a' && *str <= 'z')
+		for (j = 0; j < 52; j++)
 		{
-			*str = ((*str - 'a') + 13) % 26 + 'a';
+			if (str[i] == alphabets[j])
+			{
+				str[i] = rot13_letters[j];
+				break;
+			}
 		}
-		else if (*str >= 'A' && *str <= 'Z')
-		{
-			*str = ((*str - 'A') + 13) % 26 + 'A';
-		}
-		str++;
+		i++;
 	}
 	return (str);
 }
+
