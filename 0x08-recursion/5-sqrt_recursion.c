@@ -19,9 +19,6 @@ int _recursion_helper(int n, int start, int end)
 	if (n < 0)
 		return (-1);
 
-	if (n == 0)
-		return (0);
-
 	if (start > end)
 		return (-1);
 
