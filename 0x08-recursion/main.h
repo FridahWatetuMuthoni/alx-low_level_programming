@@ -19,4 +19,6 @@ int is_prime_number(int n);
 
 int number_division(int n, int divider);
 
+int is_palindrome(char *s);
+
 #endif
