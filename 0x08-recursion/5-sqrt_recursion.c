@@ -25,6 +25,9 @@ int _recursion_helper(int n, int start, int end)
 	if (start > end)
 		return (-1);
 
+	if (n == 1)
+		return (1);
+
 	middle = (start + end) / 2;
 
 	if ((middle * middle) == n)
