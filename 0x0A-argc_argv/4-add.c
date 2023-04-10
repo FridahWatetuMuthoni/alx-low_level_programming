@@ -1,5 +1,4 @@
 #include "main.h"
-#include <ctype.h>
 
 /**
  * main-adds the commandline arguements that are postive
@@ -11,7 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-	int i, sum;
+	int i, sum, num;
 
 	if (argc == 1)
 	{
@@ -22,15 +21,15 @@ int main(int argc, char *argv[])
 	sum = 0;
 	for (i = 1; i < argc; i++)
 	{
-		if (isdigit(argv[i][0]))
+		for (num = 0; argv[i][num]; num++)
 		{
-			sum += atoi(argv[i]);
+			if (argv[i][num] < '0' || argv[i][num] > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		else
-		{
-			printf("Error\n");
-			return (1);
-		}
+		sum += atoi(argv[num]);
 	}
 	printf("%d\n", sum);
 	return (0);
