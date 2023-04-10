@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 {
 	if (argc > 1)
 	{
-		int mult;
+		unsigned int mult;
 
 		mult = atoi(argv[1]) * atoi(argv[2]);
 		printf("%d\n", mult);
