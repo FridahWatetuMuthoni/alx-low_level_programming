@@ -10,7 +10,7 @@
 
 char *argstostr(int ac, char **av)
 {
-	int i, j, len, index;
+	int i, j, index, len;
 	char *str;
 
 	if (ac == 0 || av == NULL)
@@ -18,10 +18,10 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	}
 
-	len = 0;
+	len = ac;
 	for (i = 0; i < ac; i++)
 	{
-		for (j = 0; av[i][j] != '\0'; j++)
+		for (j = 0; av[i][j]; j++)
 		{
 			len++;
 		}
@@ -43,7 +43,7 @@ char *argstostr(int ac, char **av)
 		str[index] = '\n';
 		index++;
 	}
-	str[index] = '\0';
+	str[size] = '\0';
 
 	return (str);
 }
