@@ -43,7 +43,7 @@ char *argstostr(int ac, char **av)
 		str[index] = '\n';
 		index++;
 	}
-	str[size] = '\0';
+	str[len] = '\0';
 
 	return (str);
 }
