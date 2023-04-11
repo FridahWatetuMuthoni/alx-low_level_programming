@@ -14,7 +14,7 @@ char *create_array(unsigned int size, char c)
 	char *str_arr;
 	unsigned int i;
 
-	if (minimum > size)
+	if (minimum == size)
 		return (NULL);
 
 	str_arr = (char *)malloc(sizeof(char) * size);
