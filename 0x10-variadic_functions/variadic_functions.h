@@ -5,6 +5,20 @@
 #include <stdio.h>
 #include <stdarg.h>
 
+/**
+ * struct print - creates a struct for printing
+ * @specifer: symbol representing data types
+ * @print_func: function pointer that pointers to the function that
+ * prints a data type that corresponds to the specifer
+ */
+
+typedef struct print
+{
+	char *specifer;
+	void (*print_func)(va_list arg);
+} print_t;
+
+
 int _putchar(char c);
 
 int sum_them_all(const unsigned int n, ...);
