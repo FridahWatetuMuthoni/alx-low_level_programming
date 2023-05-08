@@ -10,7 +10,7 @@ void closing_file(int fd);
  * Return: the function returns a pointer to the newly-allocated buffer.
  */
 
-char *create_buffer(char *file)
+char *creating_buffer(char *file)
 {
 	char *buffer;
 
@@ -31,7 +31,7 @@ char *create_buffer(char *file)
  * @file_descriptor: file descriptor to be closed.
  */
 
-void close_file(int file_descriptor)
+void closing_file(int file_descriptor)
 {
 	int ch;
 
@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 
-	buffer = create_buffer(argv[2]);
+	buffer = creating_buffer(argv[2]);
 	from = open(argv[1], O_RDONLY);
 	read_file = read(from, buffer, 1024);
 	dest = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
@@ -92,8 +92,8 @@ int main(int argc, char *argv[])
 	} while (read_file > 0);
 
 	free(buffer);
-	close_file(from);
-	close_file(dest);
+	closing_file(from);
+	closing_file(dest);
 
 	return (0);
 }
